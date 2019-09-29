@@ -41,16 +41,10 @@ chooseExpenses();
 
 function chooseOptExpenses() {
 	for (let i = 0; i < 3; i ++) {
-		let a = prompt('Статья необязательных расходов?', '');
-	
-		if ( (typeof(a)) === 'string' && (typeof(a)) != null && a != '' && a.length < 50 )  {
-				
-			console.log('done');	
-			appData.optionalExpenses[i+1] = a;
-		} else {
-			console.log('bad result');
-			i--;
-		}    
+		let question = prompt('Статья необязательных расходов?', '');
+
+		console.log('done');	
+		appData.optionalExpenses[i+1] = question;
 	}
 }
 
