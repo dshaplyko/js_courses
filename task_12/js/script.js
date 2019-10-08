@@ -111,15 +111,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   let message = {
     loading: 'Loading...',
-    success: 'Thank you. We will contact you soom',
+    success: 'Thank you. We will contact you soon',
     failure: 'Something went wrong'
   };
 
   let form = document.querySelector('.main-form'),
-      inputs = form.querySelectorAll('input');
+      inputs = form.querySelectorAll('input'),
       statusMessage = document.createElement('div');
       
-  statusMessage.classList('status');
+  statusMessage.classList.add('status');
   form.addEventListener('submit', event => {
     event.preventDefault();
     form.appendChild(statusMessage);
