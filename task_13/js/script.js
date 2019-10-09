@@ -151,14 +151,14 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    postData(json);
-
     function clearInput() {
       for (let i = 0; i < inputs.length; i++) {
         inputs[i].value = '';
       }
     }
 
-    clearInput();
+    postData(json)
+      .then(() => statusMessage.innerHTML = message.loading)
+      .then(clearInput);
   });
 });
