@@ -30,7 +30,7 @@ inputRub.addEventListener('input', () => {
     getData()
         .then(response => {
             let data = JSON.parse(response);
-            inputUsd.value = inputRub.value / data.usd;
+            inputUsd.value = Math.floor(inputRub.value / data.usd);
         })
         .catch(() => inputUsd.value = "Что-то пошло не так");
     
